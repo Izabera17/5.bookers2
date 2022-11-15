@@ -40,7 +40,6 @@ class UsersController < ApplicationController
     @user_id =  User.find(params[:id])
 
     @book_id = @user_id.books
-
   end
 
   def update

@@ -3,7 +3,6 @@ class BooksController < ApplicationController
     before_action :is_matching_login_user, only: [:edit, :update]
     before_action :correct_user, only: [:edit]
   
-  
   def new
     @book = Book.new
     @books = Book.all
@@ -31,8 +30,6 @@ class BooksController < ApplicationController
     @users = User.new
     
     @user_id = User.find(current_user.id)
-
-   
   end
 
   def show
