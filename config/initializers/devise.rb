@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '3c460cab72deacebe4b51e5503c3b25611b4fb5bb5112caa14db74c4b438fabd32ae44465bdb26c06dea5f3f0ddbbcee4df0113436c736add7efa0a98ff892ed'
+  # config.secret_key = '38c2252d41ac820d76195700af2df4eccafe96c3a18bb817bbda74cb31e33f00e8ae26d5ba06d0d7abef42ff424f203984ac49e993055d9656fead979d2c182a'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -46,7 +46,9 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  # config.authentication_keys = [:email]
+  
+  config.authentication_keys = [:name]
+
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -126,7 +128,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '7400ae5ef6ca5e8e1129b9efde13d8e8261a360340ea4484f114df147f93f2a9385edb18a46e3f5f689abc27cade609a489c08012fb64ca9fe1bdae8c55a1c96'
+  # config.pepper = '92b095c54cf6e3f1f7df8f267ab3add70879cffadc806cbc670eaa944321e94ee078b7d9653bcccb7991ff8b2aa5e355f088910f62185d33d4020a0265a2c0d6'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -188,7 +190,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  # config.timeout_in = 30.minutes
+  config.timeout_in = 3.minutes
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
